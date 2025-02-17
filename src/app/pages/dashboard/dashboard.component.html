@@ -6,81 +6,87 @@
       <img class="cursor-pointer" src="/account-circle.svg" alt="notification">
     </div>
   </div>
+  
   <div class="flex items-center mt-6">
     <div class="flex-1 border-t border-gray-400"></div>
   </div>
 
-  <div class="max-w-3xl mx-auto">
-
-    <div class="flex max-h-fit mt-5 justify-start items-center max-w-3xl mx-auto">
-      <div>
+  <div class="max-w-3xl mx-auto mt-5">
+    <!-- Center content section -->
+    <div class="max-w-xl mx-auto m-10 flex justify-start">
+      <div class="flex flex-col justify-start items-center text-center">
         <div class="flex gap-2 items-center">
-          <h1 class="text-3xl">Welcome to the platform </h1>
-          <img src="/waving_hand.svg" alt="">
+          <h1 class="text-2xl">Welcome to the platform</h1>
+          <img src="/waving_hand.svg" alt="waving hand">
         </div>
-        <p class="text-sm text-gray-500">Complete the actions below to setup your account</p>
+        <p class="text-sm text-gray-500">Complete the actions below to set up your account</p>
       </div>
     </div>
-  
-    <div class="border border-gray-100 shadow-md m-10 rounded-lg max-w-3xl mx-auto">
+
+    <div class="border border-gray-100 shadow-md rounded-lg">
       <div class="flex justify-between items-center px-5 h-20"> 
         <h1 class="text-lg font-semibold">Get Started</h1>
-        <p class="text-md ">4 steps</p>
+        <p class="text-md">4 steps</p>
       </div>
-    
+
       <div class="flex items-center">
-        <div class="flex-1 border-t-4 border-blue-400"></div>
-        <div class="flex-1 border-t-4 border-blue-400"></div>
-        <div class="flex-1 border-t-4 border-gray-400"></div>
+        <!-- Progress Bar -->
+        <div class="w-full bg-gray-300 rounded-full h-1">
+          <div class="bg-blue-500 h-1 rounded-full" style="width: 90%"></div>
+        </div>
       </div>
-    
+
+      <!-- Steps Section -->
       <div>
-        <div class="flex justify-between items-center px-5 h-24 w-full overflow-hidden border border-slate-300/50">
-          <div class="flex justify-start gap-3 items-center min-w-0"> 
+        <!-- First Step -->
+        <div class="flex flex-col sm:flex-row sm:justify-between justify-center items-start sm:items-center gap-2 px-5 sm:py-1 py-3 sm:h-24 w-full overflow-hidden border border-slate-300/50">
+          <div class="flex flex-col sm:flex-row sm:items-center overflow-visible justify-start gap-3 items-start min-w-0">
             <img class="bg-red-500 h-10 shrink-0" src="/favorite.svg" alt="email">
             <div class="min-w-0">
-              <h2 class="text-md truncate">Connect email to your account</h2>
-              <p class="text-sm text-gray-500 truncate">Let platform automatically connect your inbox</p>
+              <h2 class="text-md sm:text-lg sm:truncate">Connect email to your account</h2>
+              <p class="text-sm text-gray-500 sm:truncate">Let the platform automatically connect your inbox</p>
             </div>
           </div>
-          <button class="px-5 h-fit bg-blue-500 text-sm text-white py-1 rounded-3xl hover:bg-blue-600 transition whitespace-nowrap shrink-0">Connect email</button>
+          <button class="px-5 h-fit bg-blue-500 text-sm sm:text-md text-white py-1 rounded-3xl hover:bg-blue-600 transition whitespace-nowrap shrink-0">Connect email</button>
         </div>
-    
-        <div class="flex justify-between items-center px-5 h-24 w-full overflow-hidden">
-          <div class="flex justify-start gap-3 items-center min-w-0"> 
-            <img class="bg-green-500 h-10 shrink-0" src="/favorite.svg" alt="email">
+
+        <!-- Second Step -->
+        <div class="flex flex-col sm:flex-row sm:justify-between justify-center items-start sm:items-center gap-2 px-5 sm:py-1 py-3 sm:h-24 w-full overflow-hidden border border-slate-300/50">
+          <div class="flex flex-col sm:flex-row sm:items-center overflow-visible justify-start gap-3 items-start min-w-0">
+            <img class="bg-green-500 h-10 shrink-0" src="/favorite.svg" alt="phone">
             <div class="min-w-0">
-              <h2 class="text-md truncate">Connect email to your account</h2>
-              <p class="text-sm text-gray-500 truncate">Let platform automatically connect your inbox</p>
+              <h2 class="text-md sm:text-lg sm:truncate">Connect phone number</h2>
+              <p class="text-sm text-gray-500 sm:truncate">Add your phone number to enhance security</p>
             </div>
           </div>
-          <button class="px-5 h-fit bg-blue-500 text-sm text-white py-1 rounded-3xl hover:bg-blue-600 transition whitespace-nowrap shrink-0">Connect email</button>
+          <button class="px-5 h-fit bg-blue-500 text-sm sm:text-md text-white py-1 rounded-3xl hover:bg-blue-600 transition whitespace-nowrap shrink-0">Connect phone</button>
         </div>
-    
-        <div class="flex justify-between items-center px-5 h-24 w-full overflow-hidden">
-          <div class="flex justify-start gap-3 items-center min-w-0"> 
-            <img class="bg-blue-500 h-10 shrink-0" src="/favorite.svg" alt="email">
+
+        <!-- Third Step -->
+        <div class="flex flex-col sm:flex-row sm:justify-between justify-center items-start sm:items-center gap-2 px-5 sm:py-1 py-3 sm:h-24 w-full overflow-hidden border border-slate-300/50">
+          <div class="flex flex-col sm:flex-row sm:items-center overflow-visible justify-start gap-3 items-start min-w-0">
+            <img class="bg-blue-500 h-10 shrink-0" src="/favorite.svg" alt="profile">
             <div class="min-w-0">
-              <h2 class="text-md truncate">Connect email to your account</h2>
-              <p class="text-sm text-gray-500 truncate">Let platform automatically connect your inbox</p>
+              <h2 class="text-md sm:text-lg sm:truncate">Set up your profile</h2>
+              <p class="text-sm text-gray-500 sm:truncate">Customize your account profile</p>
             </div>
           </div>
-          <button class="px-5 h-fit bg-blue-500 text-sm text-white py-1 rounded-3xl hover:bg-blue-600 transition whitespace-nowrap shrink-0">Connect email</button>
+          <button class="px-5 h-fit bg-blue-500 text-sm sm:text-md text-white py-1 rounded-3xl hover:bg-blue-600 transition whitespace-nowrap shrink-0">Set up profile</button>
         </div>
-    
-        <div class="flex justify-between items-center px-5 h-24 w-full overflow-hidden">
-          <div class="flex justify-start gap-3 items-center min-w-0"> 
-            <img class="bg-indigo-500 h-10 shrink-0" src="/favorite.svg" alt="email">
+
+        <!-- Fourth Step -->
+        <div class="flex flex-col sm:flex-row sm:justify-between justify-center items-start sm:items-center gap-2 px-5 sm:py-1 py-3 sm:h-24 w-full overflow-hidden border border-slate-300/50">
+          <div class="flex flex-col sm:flex-row sm:items-center overflow-visible justify-start gap-3 items-start min-w-0">
+            <img class="bg-indigo-500 h-10 shrink-0" src="/favorite.svg" alt="finish">
             <div class="min-w-0">
-              <h2 class="text-md truncate">Connect email to your account</h2>
-              <p class="text-sm text-gray-500 truncate">Let platform automatically connect your inbox</p>
+              <h2 class="text-md sm:text-lg sm:truncate">Finish setup</h2>
+              <p class="text-sm text-gray-500 sm:truncate">Complete your account setup</p>
             </div>
           </div>
-          <button class="px-5 h-fit bg-blue-500 text-sm text-white py-1 rounded-3xl hover:bg-blue-600 transition whitespace-nowrap shrink-0">Connect email</button>
+          <button class="px-5 h-fit bg-blue-500 text-sm sm:text-md text-white py-1 rounded-3xl hover:bg-blue-600 transition whitespace-nowrap shrink-0">Finish setup</button>
         </div>
+
       </div>
     </div>
   </div>
-  
-
 </div>
