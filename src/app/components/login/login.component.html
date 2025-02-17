@@ -1,0 +1,97 @@
+<div class="flex items-center justify-center min-h-screen bg-gray-100">
+  <div class="w-full max-w-md bg-white shadow-lg rounded-lg p-6">
+    <h2 class="text-3xl font-semibold text-start text-gray-700">
+      Welcome back!
+    </h2>
+    <h2 class="text-sm font-normal text-start text-gray-400">
+      Login to your account
+    </h2>
+
+    <div class="mt-6">
+      <!-- Google Login -->
+      <div class="mt-4">
+        <button
+          class="flex gap-1 justify-center items-center w-full border border-gray-300 hover:border-gray-400 text-black py-0.5 rounded-xl transition"
+        >
+          <span> <img class="h-8" [src]="'/google.png'" alt="google" /></span>
+          Sign in with Google
+        </button>
+      </div>
+    </div>
+
+    <div class="flex items-center mt-6">
+      <div class="flex-1 border-t border-gray-400"></div>
+      <span class="px-4 text-sm font-light text-gray-400">OR</span>
+      <div class="flex-1 border-t border-gray-400"></div>
+    </div>
+    <form class="mt-6">
+      <!-- Email -->
+      <div class="mt-4">
+        <label class="block text-gray-700">Email</label>
+        <input
+          type="email"
+          placeholder="Enter your email"
+          class="rounded-3xl text-sm border-neutral-300 border w-full px-4 py-2 p-3 my-1"
+        />
+      </div>
+
+      <!-- Password -->
+      <div class="mt-4 relative">
+        <label class="block text-gray-700">Password</label>
+        <input
+          [type]="showPassword ? 'text' : 'password'"
+          placeholder="Enter your password"
+          class="rounded-3xl text-sm border-neutral-300 border w-full px-4 py-2 p-3 my-1"
+        />
+        <span
+          class="absolute inset-y-0 right-4 top-6 flex items-center cursor-pointer"
+          (click)="togglePassword()"
+        >
+          <img
+            [src]="showPassword ? '/open-eye.png' : '/closed-eye.png'"
+            alt="eye"
+            class="h-5 opacity-50"
+          />
+        </span>
+      </div>
+      <div class="flex justify-between items-center mt-4">
+        <div class="flex gap-2 cursor-pointer">
+          <input
+            type="checkbox"
+            id="remember"
+            name="remember"
+            value="remember"
+          />
+          <label
+            for="remember"
+            class="cursor-pointer text-sm text-center items-center justify-center text-gray-400"
+          >
+            Remember me</label
+          >
+        </div>
+
+        <p class="text-sm cursor-pointer">
+          <a href="/forgotpassword" class="text-blue-600 hover:underline"
+            >Forgot Password</a
+          >
+        </p>
+      </div>
+
+      <!-- Login Button -->
+      <button
+        type="submit"
+        class="w-full mt-6 bg-blue-500 text-white py-2 rounded-3xl hover:bg-blue-600 transition"
+      >
+        Log In
+      </button>
+
+      <!-- Sign up Link -->
+      <p class="mt-4 text-sm text-center">
+        Don't have an account?
+        <a href="/signup" class="text-blue-600 hover:underline font-semibold"
+          >Create account</a
+        >
+      </p>
+    </form>
+  </div>
+</div>
