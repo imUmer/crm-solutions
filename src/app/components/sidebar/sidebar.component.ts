@@ -1,15 +1,22 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-sidebar',
-  imports: [RouterLink],
+  standalone: true,
+  imports: [CommonModule],  // Import CommonModule
   templateUrl: './sidebar.component.html',
-  styleUrl: './sidebar.component.scss'
+  styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent {
-  isSidebarOpen = false;
+  isSidebarOpen: boolean = true;  // Sidebar default state (desktop)
+  isMobileSidebarOpen: boolean = false;  // Mobile sidebar state
+
   toggleSidebar() {
     this.isSidebarOpen = !this.isSidebarOpen;
+  }
+
+  toggleMobileSidebar() {
+    this.isMobileSidebarOpen = !this.isMobileSidebarOpen;
   }
 }

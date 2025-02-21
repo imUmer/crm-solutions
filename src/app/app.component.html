@@ -1,8 +1,8 @@
 <div class="flex h-screen w-screen">
-  <!-- Sidebar -->
-  <app-sidebar></app-sidebar>
+  <!-- Sidebar (Visible only on md and larger) -->
+  <app-sidebar class="hidden md:flex"></app-sidebar>
 
-  <!-- Main Content overflow-auto"> -->
+  <!-- Main Content -->
   <div class="flex-1 bg-gray-50 p-3 h-full">
     <router-outlet></router-outlet>
   </div>
