@@ -11,7 +11,7 @@
 
   <!-- Sidebar Toggle Button -->
   <button class="hidden md:block p-2 self-end cursor-pointer items-center m-2 px-2 py-2 rounded-lg text-gray-700 hover:bg-white hover:shadow-md" (click)="toggleSidebar()">
-    <img [src]=" isSidebarOpen ? '/arrow_menu_close_black.svg' : '/arrow_menu_open_black.svg'" alt="">
+    <img [src]=" isSidebarOpen ? '/arrow_menu_close_black.svg' : '/arrow_menu_open_black.svg'" alt="Toggle">
   </button>
 
   <!-- Logo -->
@@ -54,8 +54,8 @@
   </nav>
 
   <!-- Logout Button -->
-  <div class="mt-auto p-4 border-t">
-    <button class="w-full flex items-center px-4 py-3 rounded-lg text-red-500 hover:bg-red-100 hover:shadow-md">
+  <div  [ngClass]="{'flex w-fit': !isSidebarOpen}" class="mt-auto px-4 py-6 space-y-2">
+    <button  class="w-full flex items-center px-4 py-3 rounded-lg text-red-500 hover:bg-red-100 hover:shadow-md">
       <span>🚪</span>
       <span *ngIf="isSidebarOpen" class="ml-3">Logout</span>
     </button>
