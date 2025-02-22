@@ -1,0 +1,16 @@
+/* Ensures smooth transition for sidebar width */
+div {
+    transition: width 0.3s ease-in-out;
+  }
+  button {
+    width: 50px;
+    height: 50px;
+  }
+  
+  button .cls-2 {
+    fill: #888;
+  }
+  
+  button:hover .cls-2 {
+    fill: rgb(255, 255, 126);
+  }
