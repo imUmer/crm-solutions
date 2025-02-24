@@ -13,14 +13,16 @@ export const routes: Routes = [
     { path: '', component: MainLayoutComponent },  
     { path: 'signup', component: SignupComponent }, 
     { path: 'login', component: LoginComponent }, 
-    { path: 'dashboard', component: DashboardComponent }, 
-    { path: 'receipts', component: ReceiptsComponent }, 
+    
     // Routes for authentication (without sidebar)
     { path: 'admin', canActivate: [AuthGuard], loadChildren: () => import('./modules/admin/admin.module').then((m)=> m.AdminModule)},
     
     // Routes for dashboard and other main pages (with sidebar)
     { path: '', component: MainLayoutComponent, children: [
         { path: 'dashboard', component: DashboardComponent }, 
+        { path: 'receipts', component: ReceiptsComponent }, 
+        { path: '**', component: NotfoundComponent }, 
+
         // Add more pages inside the dashboard layout if needed
     ]},
     
