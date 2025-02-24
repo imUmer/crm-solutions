@@ -1,4 +1,4 @@
-<div class="relative sm:flex md:hidden justify-between items-center px-5 py-3 border-b bg-white">
+<div class="relative flex md:hidden justify-between items-center px-5 py-1 border-b bg-white">
   <!-- Logo -->
   <span class="text-lg font-bold italic text-blue-600">SpendTrack</span>
 
@@ -12,15 +12,15 @@
   </button>
 
   <!-- Mobile Menu (Hidden by Default, Shows on Click) -->
-  <div 
-    *ngIf="mobileMenuOpen"
-    class="absolute top-14 left-0 w-full bg-white border-t shadow-lg z-20 animate-slide-down"
-  >
-    <ul class="p-4 space-y-3 text-gray-800">
-      <li class="px-4 py-2 hover:bg-gray-100 rounded-md">Home</li>
-      <li class="px-4 py-2 hover:bg-gray-100 rounded-md">About</li>
-      <li class="px-4 py-2 hover:bg-gray-100 rounded-md">Services</li>
-      <li class="px-4 py-2 hover:bg-gray-100 rounded-md">Contact</li>
-    </ul>
-  </div>
+</div>
+<div 
+  *ngIf="mobileMenuOpen"
+  class=" top-14 left-0 w-full bg-white border-t shadow-lg z-20 transition-all animate-slide-down"
+>
+  <ul class="p-4 space-y-3 text-gray-800">
+    <li class="px-4 py-2 hover:bg-gray-100 rounded-md">Dashboard</li>
+    <li class="px-4 py-2 hover:bg-gray-100 rounded-md">Recipts</li>
+    <li class="px-4 py-2 hover:bg-gray-100 rounded-md">Services</li>
+    <li class="px-4 py-2 hover:bg-gray-100 rounded-md">Contact</li>
+  </ul>
 </div>
