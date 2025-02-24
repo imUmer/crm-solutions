@@ -1,0 +1,26 @@
+<div class="relative sm:flex md:hidden justify-between items-center px-5 py-3 border-b bg-white">
+  <!-- Logo -->
+  <span class="text-lg font-bold italic text-blue-600">SpendTrack</span>
+
+  <!-- Burger Menu Button -->
+  <button
+    class="border p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition"
+    (click)="toggleMobileMenu()"
+    aria-label="Toggle Mobile Menu"
+  >
+    <img src="/menu-black.svg" alt="Toggle Menu" class="w-6 h-6">
+  </button>
+
+  <!-- Mobile Menu (Hidden by Default, Shows on Click) -->
+  <div 
+    *ngIf="mobileMenuOpen"
+    class="absolute top-14 left-0 w-full bg-white border-t shadow-lg z-20 animate-slide-down"
+  >
+    <ul class="p-4 space-y-3 text-gray-800">
+      <li class="px-4 py-2 hover:bg-gray-100 rounded-md">Home</li>
+      <li class="px-4 py-2 hover:bg-gray-100 rounded-md">About</li>
+      <li class="px-4 py-2 hover:bg-gray-100 rounded-md">Services</li>
+      <li class="px-4 py-2 hover:bg-gray-100 rounded-md">Contact</li>
+    </ul>
+  </div>
+</div>
