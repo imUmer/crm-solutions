@@ -1,20 +1,29 @@
-<div class="p-6 bg-white shadow-md rounded-lg">
-    <!-- Header -->
-    <div class="flex justify-between items-center mb-4">
-      <h2 class="text-2xl font-semibold">Receipts</h2>
+<div class="bg-white border rounded-xl h-full w-full flex flex-col">
+   <!-- Fixed Header -->
+   <div class="flex justify-between sm:rounded-tr-xl sm:rounded-tl-xl items-center px-5 sm:py-4 py-3 bg-white sticky top-0 z-10 border-b border-gray-300">
+    <h1 class="sm:text-2xl font-bold">Recipts</h1>
+    <div class="flex gap-3">
+      <img class="cursor-pointer w-6 h-6" src="/notifications.svg" alt="notification">
+      <img class="cursor-pointer w-6 h-6" src="/account-circle.svg" alt="profile">
+    </div>
+  </div>
+
+  <div class=" border">
+    
+    <!-- Last Sync -->
+    <div class="flex sm:flex-row flex-col m-5 sm:justify-between sm:items-center mb-2">
+      <div class="text-gray-500 text-sm mb-4">
+        Last Sync: 23rd August 2024 <a href="#" class="text-blue-500 underline">Sync All Email Accounts</a>
+      </div>
       <div class="flex space-x-4">
         <button class="px-4 py-2 bg-blue-500 text-white rounded-lg">+ Add Receipt</button>
         <button class="px-4 py-2 bg-blue-600 text-white rounded-lg">⬇ Export</button>
       </div>
     </div>
-  
-    <!-- Last Sync -->
-    <div class="text-gray-500 text-sm mb-4">
-      Last Sync: 23rd August 2024 <a href="#" class="text-blue-500 underline">Sync All Email Accounts</a>
-    </div>
+    
   
     <!-- Filters -->
-    <div class="flex space-x-2 mb-4">
+    <div class="  mx-5 flex space-x-2 mb-1">
       <input type="text" placeholder="🔍 Search" class="border px-3 py-2 rounded-lg w-1/3">
       <select class="border px-3 py-2 rounded-lg">
         <option>Select date</option>
@@ -31,7 +40,7 @@
     </div>
   
     <!-- Table -->
-    <div class="border rounded-lg">
+    <div class="overflow-auto flex-1 m-5 mb-0.5 border rounded-lg">
       <table class="w-full text-left">
         <thead class="border-b bg-gray-100">
           <tr>
@@ -46,26 +55,20 @@
           </tr>
         </thead>
         <tbody>
-          <tr class="border-b">
+          <tr *ngFor="let receipt of receipts" class="border-b">
             <td class="py-2 px-4"><input type="checkbox"></td>
-            <td class="py-2 px-4">Amazon</td>
-            <td class="py-2 px-4">2024-11-25</td>
-            <td class="py-2 px-4">$125.50</td>
-            <td class="py-2 px-4"><span class="bg-pink-200 text-pink-800 px-2 py-1 rounded">Office Supplies</span></td>
-            <td class="py-2 px-4">Email (Gmail)</td>
-            <td class="py-2 px-4"><span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded">Pending</span></td>
+            <td class="py-2 px-4">{{ receipt.vendor }}</td>
+            <td class="py-2 px-4">{{ receipt.date }}</td>
+            <td class="py-2 px-4">${{ receipt.amount }}</td>
             <td class="py-2 px-4">
-              <button class="text-gray-600">⋮</button>
+              <span [ngClass]="getCategoryClass(receipt.category)" class=" px-2 py-1 rounded">{{ receipt.category }}</span>
             </td>
-          </tr>
-          <tr>
-            <td class="py-2 px-4"><input type="checkbox"></td>
-            <td class="py-2 px-4">Starbucks</td>
-            <td class="py-2 px-4">2024-11-24</td>
-            <td class="py-2 px-4">$30.00</td>
-            <td class="py-2 px-4"><span class="bg-blue-200 text-blue-800 px-2 py-1 rounded">Travel</span></td>
-            <td class="py-2 px-4">Manual Upload</td>
-            <td class="py-2 px-4"><span class="bg-green-100 text-green-800 px-2 py-1 rounded">Processed</span></td>
+            <td class="py-2 px-4">{{ receipt.source }}</td>
+            <td class="py-2 px-4">
+              <span class="px-2 py-1 rounded" [ngClass]="getStatusClass(receipt.status)">
+                {{ receipt.status }}
+              </span>
+            </td>
             <td class="py-2 px-4">
               <button class="text-gray-600">⋮</button>
             </td>
@@ -75,7 +78,7 @@
     </div>
   
     <!-- Pagination -->
-    <div class="flex justify-between items-center mt-4">
+    <div class="flex justify-between items-center mx-5 my-2">
       <p class="text-gray-500">Page 1 of 10</p>
       <div class="flex space-x-2">
         <button class="px-4 py-2 border rounded-lg text-gray-600">Previous</button>
@@ -83,4 +86,4 @@
       </div>
     </div>
   </div>
-  
+</div>
