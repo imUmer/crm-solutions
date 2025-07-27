@@ -1,1 +1,5 @@
-<p>messagebox works!</p>
+<div class="message-box" [ngClass]="type" *ngIf="message">
+    <span class="message-text">{{ message }}</span>
+    <button class="close-btn" (click)="closeMessage()">×</button>
+</div>
+  
