@@ -1,1 +1,11 @@
-<p>dialogbox works!</p>
+<div class="overlay" *ngIf="show">
+    <div class="dialog-box">
+      <h2>{{ title }}</h2>
+      <p>{{ message }}</p>
+      <div class="actions">
+        <button (click)="onClose(true)">OK</button>
+        <button (click)="onClose(false)">Cancel</button>
+      </div>
+    </div>
+  </div>
+  
